@@ -16,7 +16,7 @@
     }
   },
   {
-    "_id": "62b591a0-f887-11e8-8fe6-3b14bca413fc",
+    "_id": "87241fe0-f894-11e8-8e7f-213efdfa8cf7",
     "_type": "index-pattern",
     "_source": {
       "title": "kubernetes_cluster*",
@@ -25,16 +25,15 @@
     }
   },
   {
-    "_id": "055ab280-425a-11e8-8bf5-0529df825f82",
+    "_id": "45caa570-368c-11e8-9f03-db5dae1ff024",
     "_type": "search",
     "_source": {
-      "title": "All Logs",
+      "title": "Logs",
       "description": "",
       "hits": 0,
       "columns": [
         "kubernetes.container_name",
-        "log",
-        "kubernetes.host"
+        "log"
       ],
       "sort": [
         "@timestamp",
@@ -42,7 +41,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
       }
     }
   },
@@ -63,20 +62,21 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"log: Traceback OR log: error\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"log: Traceback OR log: error\"},\"filter\":[]}"
       }
     }
   },
   {
-    "_id": "45caa570-368c-11e8-9f03-db5dae1ff024",
+    "_id": "055ab280-425a-11e8-8bf5-0529df825f82",
     "_type": "search",
     "_source": {
-      "title": "Logs",
+      "title": "All Logs",
       "description": "",
       "hits": 0,
       "columns": [
         "kubernetes.container_name",
-        "log"
+        "log",
+        "kubernetes.host"
       ],
       "sort": [
         "@timestamp",
@@ -84,7 +84,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -98,7 +98,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
       }
     }
   },
@@ -112,7 +112,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
       }
     }
   },
@@ -126,7 +126,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
@@ -140,7 +140,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"62b591a0-f887-11e8-8fe6-3b14bca413fc\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   }
