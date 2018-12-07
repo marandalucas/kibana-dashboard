@@ -2,6 +2,22 @@
   "version": "6.4.0",
   "objects": [
     {
+      "id": "04dae180-336f-11e8-9f03-db5dae1ff024",
+      "type": "dashboard",
+      "attributes": {
+        "title": "k8sDashboard",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"gridData\":{\"h\":11,\"i\":\"1\",\"w\":21,\"x\":0,\"y\":0},\"id\":\"e2fd7280-336e-11e8-9f03-db5dae1ff024\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"gridData\":{\"h\":11,\"i\":\"2\",\"w\":27,\"x\":21,\"y\":0},\"id\":\"0f0172c0-3773-11e8-8bf5-0529df825f82\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"gridData\":{\"h\":7,\"i\":\"3\",\"w\":12,\"x\":0,\"y\":22},\"id\":\"74ad2b40-3774-11e8-8bf5-0529df825f82\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"gridData\":{\"h\":11,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":11},\"id\":\"d1cda750-3774-11e8-8bf5-0529df825f82\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"gridData\":{\"h\":11,\"i\":\"6\",\"w\":36,\"x\":12,\"y\":11},\"id\":\"45caa570-368c-11e8-9f03-db5dae1ff024\",\"panelIndex\":\"6\",\"type\":\"search\",\"version\":\"6.4.2\"},{\"gridData\":{\"h\":7,\"i\":\"7\",\"w\":36,\"x\":12,\"y\":22},\"id\":\"28e18610-3775-11e8-8bf5-0529df825f82\",\"panelIndex\":\"7\",\"type\":\"search\",\"version\":\"6.4.2\"}]",
+        "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+        "version": 1,
+        "timeRestore": true,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+        }
+      }
+    },
+    {
       "id": "b717cc80-0103-11e8-b252-0381f17e66dd",
       "type": "search",
       "updated_at": "2018-09-19T18:43:37.483Z",
