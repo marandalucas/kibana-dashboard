@@ -42,6 +42,126 @@
       }
     },
     {
+      "id": "45caa570-368c-11e8-9f03-db5dae1ff024",
+      "type": "search",
+      "attributes": {
+        "title": "Logs",
+        "description": "",
+        "hits": 0,
+        "columns": [
+          "kubernetes.container_name",
+          "log"
+        ],
+        "sort": [
+          "@timestamp",
+          "desc"
+        ],
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "id": "28e18610-3775-11e8-8bf5-0529df825f82",
+      "type": "search",
+      "attributes": {
+        "title": "Error Logs",
+        "description": "",
+        "hits": 0,
+        "columns": [
+          "kubernetes.container_name",
+          "log"
+        ],
+        "sort": [
+          "@timestamp",
+          "desc"
+        ],
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"log: Traceback OR log: error\"},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "id": "055ab280-425a-11e8-8bf5-0529df825f82",
+      "type": "search",
+      "attributes": {
+        "title": "All Logs",
+        "description": "",
+        "hits": 0,
+        "columns": [
+          "kubernetes.container_name",
+          "log",
+          "kubernetes.host"
+        ],
+        "sort": [
+          "@timestamp",
+          "desc"
+        ],
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "id": "e2fd7280-336e-11e8-9f03-db5dae1ff024",
+      "type": "visualization",
+      "attributes": {
+        "title": "Log entries per pod",
+        "visState": "{\"title\":\"Log entries per pod\",\"type\":\"pie\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":true,\"labels\":{\"last_level\":true,\"show\":true,\"truncate\":100,\"values\":true},\"legendPosition\":\"right\",\"type\":\"pie\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"kubernetes.container_name.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":true,\"missingBucketLabel\":\"Syslog\",\"size\":9999999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Container\"}}]}",
+        "uiStateJSON": "{\n  \"spy\": null,\n  \"vis\": {\n    \"legendOpen\": true\n  }\n}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        }
+      }
+    },
+    {
+      "id": "74ad2b40-3774-11e8-8bf5-0529df825f82",
+      "type": "visualization",
+      "attributes": {
+        "title": "Amount Errors",
+        "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"filters\":[{\"input\":{\"query\":\"log: Traceback OR log: error\"},\"label\":\"Error Log Entries\"}]},\"schema\":\"group\",\"type\":\"filters\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":35,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"Amount Errors\",\"type\":\"metric\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        }
+      }
+    },
+    {
+      "id": "d1cda750-3774-11e8-8bf5-0529df825f82",
+      "type": "visualization",
+      "attributes": {
+        "title": "Amount Logs",
+        "visState": "{\"title\":\"Amount Logs\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":35}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
+      "id": "0f0172c0-3773-11e8-8bf5-0529df825f82",
+      "type": "visualization",
+      "attributes": {
+        "title": "Log Entries",
+        "visState": "{\"title\":\"Log Entries\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":null},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":false,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"87241fe0-f894-11e8-8e7f-213efdfa8cf7\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
       "id": "8dc5bb60-9656-11e8-83ae-8f740c3949e5",
       "type": "index-pattern",
       "updated_at": "2018-10-22T13:30:20.403Z",
